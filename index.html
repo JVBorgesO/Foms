@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>G8 RUN - Pesquisa de Opinião</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="container">
+      <header class="hero">
+        <div class="logo-area">
+          <div class="logo-g8">Grupo Comando G8</div>
+          <h1>G8 RUN – Pesquisa de Opinião</h1>
+          <p class="subtitle">
+            Ajude a construir a G8 RUN, a corrida que conecta pessoas, performance e propósito.
+          </p>
+        </div>
+
+        <div class="hero-tag">
+          <span>Pesquisa rápida</span>
+          <span>Leva menos de 3 minutos</span>
+        </div>
+
+        <!-- <div class="steps">
+          <span class="step active">1. Seus dados</span>
+          <span class="step">2. Sua visão</span>
+          <span class="step">3. Experiência ideal</span>
+        </div> -->
+      </header>
+
+      <form id="g8run-form">
+        <!-- SEÇÃO 1: DADOS BÁSICOS -->
+        <section class="section">
+          <h2>1. Seus dados</h2>
+
+          <div class="field-group">
+            <label for="nome">Nome completo *</label>
+            <input type="text" id="nome" name="nome" required />
+          </div>
+
+          <div class="inline-group">
+            <div class="field-group">
+              <label for="email">E-mail *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="email"
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="telefone">Telefone / WhatsApp *</label>
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                required
+                maxlength="16"
+                autocomplete="tel"
+                inputmode="tel"
+              />
+              <small class="helper-text">Usaremos apenas para contato sobre o projeto.</small>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="cidade">Cidade / Região *</label>
+            <input type="text" id="cidade" name="cidade" required />
+          </div>
+        </section>
+
+        <!-- SEÇÃO 2: VISÃO SOBRE O PROJETO -->
+        <section class="section">
+          <h2>2. Sua visão sobre a G8 RUN</h2>
+
+          <div class="field-group">
+            <label for="percepcao">O que você achou da ideia da G8 RUN? *</label>
+            <select id="percepcao" name="percepcao" required>
+              <option value="">Selecione...</option>
+              <option value="incrivel">Achei incrível, tem tudo a ver com a G8</option>
+              <option value="boa">Boa ideia, pode engajar bastante</option>
+              <option value="indiferente">Indiferente</option>
+              <option value="nao_faz_sentido">Não faz sentido para a empresa</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label>Na sua opinião, quanto a G8 RUN agrega valor para a empresa? *</label>
+            <div class="likert-row">
+              <span class="likert-label-left">Pouco</span>
+              <div class="likert-options">
+                <label>
+                  <input type="radio" name="valor_g8" value="1" required />
+                  1
+                </label>
+                <label>
+                  <input type="radio" name="valor_g8" value="2" />
+                  2
+                </label>
+                <label>
+                  <input type="radio" name="valor_g8" value="3" />
+                  3
+                </label>
+                <label>
+                  <input type="radio" name="valor_g8" value="4" />
+                  4
+                </label>
+                <label>
+                  <input type="radio" name="valor_g8" value="5" />
+                  5
+                </label>
+              </div>
+              <span class="likert-label-right">Extremamente</span>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="participaria">Você participaria da G8 RUN? *</label>
+            <select id="participaria" name="participaria" required>
+              <option value="">Selecione...</option>
+              <option value="sim">Sim</option>
+              <option value="talvez">Talvez</option>
+              <option value="nao">Não</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- SEÇÃO 3: SEU PERFIL -->
+        <section class="section">
+          <h2>3. Seu perfil</h2>
+
+          <div class="inline-group">
+            <div class="field-group">
+              <label for="faixa_etaria">Faixa etária *</label>
+              <select id="faixa_etaria" name="faixa_etaria" required>
+                <option value="">Selecione...</option>
+                <option value="18-24">18 a 24 anos</option>
+                <option value="25-34">25 a 34 anos</option>
+                <option value="35-44">35 a 44 anos</option>
+                <option value="45-54">45 a 54 anos</option>
+                <option value="55+">55 anos ou mais</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="nivel">Você pratica atividades físicas? *</label>
+              <select id="nivel" name="nivel" required>
+                <option value="">Selecione...</option>
+                <option value="nao_pratico">Quase não pratico</option>
+                <option value="1-2x">1–2x por semana</option>
+                <option value="3+">3+ vezes por semana</option>
+                <option value="corredor">Sou corredor(a)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="distancia">Que formato faria mais sentido para você? *</label>
+            <select id="distancia" name="distancia" required>
+              <option value="">Selecione...</option>
+              <option value="caminhada_3k">Caminhada leve 3K</option>
+              <option value="corrida_5k">Corrida 5K</option>
+              <option value="corrida_10k">Corrida 10K</option>
+              <option value="kids">Circuito Kids / Família</option>
+              <option value="corporativo">Times internos / por áreas</option>
+              <option value="todas">Uma combinação de vários formatos</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label>Você levaria familiares (filhos, parceiro, etc.) para a G8 RUN? *</label>
+            <div class="options-row">
+              <label><input type="radio" name="familia" value="sim" required /> Sim</label>
+              <label><input type="radio" name="familia" value="talvez" /> Talvez</label>
+              <label><input type="radio" name="familia" value="nao" /> Não</label>
+            </div>
+          </div>
+        </section>
+
+        <!-- SEÇÃO 4: EXPERIÊNCIA IDEAL -->
+        <section class="section">
+          <h2>4. Experiência ideal</h2>
+
+          <div class="field-group">
+            <label>O que mais te atrairia para participar da G8 RUN? (pode escolher mais de uma opção)</label>
+            <div class="options-column">
+              <label><input type="checkbox" name="atracao" value="Kit de corrida bonito" /> Kit de corrida bonito</label>
+              <label><input type="checkbox" name="atracao" value="Medalha exclusiva" /> Medalha exclusiva</label>
+              <label><input type="checkbox" name="atracao" value="Evento com música / arena" /> Evento com música / arena</label>
+              <label><input type="checkbox" name="atracao" value="Prova leve para iniciantes" /> Prova leve para iniciantes</label>
+              <label><input type="checkbox" name="atracao" value="Competição entre áreas internas" /> Competição entre áreas internas</label>
+              <label><input type="checkbox" name="atracao" value="Causa social / solidária" /> Causa social / solidária</label>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="local_preferido">Onde você preferiria que acontecesse a G8 RUN?</label>
+            <select id="local_preferido" name="local_preferido">
+              <option value="">Selecione...</option>
+              <option value="centro_sp">Centro de São Paulo</option>
+              <option value="zona_norte">Zona Norte de São Paulo</option>
+              <option value="parque">Parque (ex.: Ibirapuera, Villa-Lobos, etc.)</option>
+              <option value="avenida_exclusiva">Avenida exclusiva para o evento</option>
+              <option value="proximo_bases">Próximo às bases da G8</option>
+              <option value="indiferente">Indiferente</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label>O que você gostaria de ver no kit da G8 RUN? (pode escolher mais de uma opção)</label>
+            <div class="options-column">
+              <label><input type="checkbox" name="kit_item" value="Camiseta" /> Camiseta</label>
+              <label><input type="checkbox" name="kit_item" value="Squeeze" /> Squeeze</label>
+              <label><input type="checkbox" name="kit_item" value="Mochila" /> Mochila / Gym bag</label>
+              <label><input type="checkbox" name="kit_item" value="Boné" /> Boné</label>
+              <label><input type="checkbox" name="kit_item" value="Toalha" /> Toalha</label>
+              <label><input type="checkbox" name="kit_item" value="Bandana" /> Bandana</label>
+              <label class="inline-other">
+                <input type="checkbox" name="kit_item" value="Outros" />
+                Outros:
+                <input type="text" id="kit_outros" name="kit_outros" placeholder="Especifique" />
+              </label>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="beneficios">Quais benefícios você vê no projeto G8 RUN? *</label>
+            <textarea
+              id="beneficios"
+              name="beneficios"
+              required
+              placeholder="Ex.: saúde, integração dos times, clima organizacional, imagem da marca, família, ESG, etc."
+            ></textarea>
+          </div>
+
+          <div class="field-group">
+            <label for="preocupacoes">
+              O que poderia te impedir de participar da G8 RUN? (opcional)
+            </label>
+            <textarea
+              id="preocupacoes"
+              name="preocupacoes"
+              placeholder="Ex.: distância, custo, horário, preparo físico, segurança, etc."
+            ></textarea>
+          </div>
+
+          <div class="field-group">
+            <label for="ideias">
+              Que ideias você tem para deixar a G8 RUN inesquecível? (opcional)
+            </label>
+            <textarea
+              id="ideias"
+              name="ideias"
+              placeholder="Ex.: show, ações com família, causas sociais, ativações de marca, experiências na arena, etc."
+            ></textarea>
+          </div>
+
+          <div class="field-group">
+            <label>Você teria interesse em ser embaixador(a) ou voluntário(a) da G8 RUN?</label>
+            <div class="options-row">
+              <label><input type="radio" name="embaixador" value="sim" /> Quero saber mais</label>
+              <label><input type="radio" name="embaixador" value="talvez" /> Talvez</label>
+              <label><input type="radio" name="embaixador" value="nao" /> Não por enquanto</label>
+            </div>
+          </div>
+
+          <div class="checkbox-row">
+            <input type="checkbox" id="marketing" name="marketing" />
+            <label for="marketing">
+              Aceito receber novidades sobre a G8 RUN e outros eventos da Comando G8.
+            </label>
+          </div>
+        </section>
+
+        <button type="submit" class="btn-submit" id="submit-btn">
+          Enviar minha opinião
+        </button>
+
+        <div id="status-success" class="status-message status-success">
+          Obrigado! Sua opinião foi registrada 🙌
+        </div>
+
+        <div id="status-error" class="status-message status-error">
+          Ocorreu um erro ao enviar. Tente novamente em alguns instantes.
+        </div>
+
+        <p class="footer-text">
+          Seus dados serão usados apenas para fins relacionados ao projeto G8 RUN e ações da Comando G8.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
